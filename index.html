@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<style>
+    .id,
+    .id2,
+    .id3,
+    .name,
+    .name2,
+    .name3,
+    .url,
+    .url2,
+    .url3 {
+        display: none;
+    }
+
+    .button {
+        margin-left: 80vw;
+    }
+</style>
+
+<body>
+    <button type="button" class="btn btn-primary button" onclick="toggleData()">Load Data</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">url</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="id"></td>
+                <td class="name"></td>
+                <td class="url"></td>
+            </tr>
+            <tr>
+                <td class="id2"></td>
+                <td class="name2"></td>
+                <td class="url2"></td>
+            </tr>
+            <tr>
+                <td class="id3"></td>
+                <td class="name3"></td>
+                <td class="url3"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    function getData() {
+        fetch("https://aimtell.com/files/sites.json")
+            .then(res => res.json())
+            .then(data => {
+                Array.from(data.sites)
+                data.sites.map((item) => {
+
+                    // id elements
+                    let firstId = data.sites[0].id
+                    let secondId = data.sites[1].id
+                    let thirdId = data.sites[2].id
+                    document.querySelector('.id').innerHTML = firstId
+                    document.querySelector('.id2').innerHTML = secondId
+                    document.querySelector('.id3').innerHTML = thirdId
+
+                    // name elements
+                    let firstName = data.sites[0].name
+                    let secondName = data.sites[1].name
+                    let thirdName = data.sites[2].name
+                    document.querySelector('.name').innerHTML = firstName
+                    document.querySelector('.name2').innerHTML = secondName
+                    document.querySelector('.name3').innerHTML = thirdName
+
+                    //url elements
+                    let firstUrl = data.sites[0].url
+                    let secondUrl = data.sites[1].url
+                    let thirdUrl = data.sites[2].url
+                    document.querySelector('.url').innerHTML = firstUrl
+                    document.querySelector('.url2').innerHTML = secondUrl
+                    document.querySelector('.url3').innerHTML = thirdUrl
+
+
+                })
+            });
+    }
+
+    function toggleData() {
+        const id1 = document.querySelector('.id')
+        const id2 = document.querySelector('.id2')
+        const id3 = document.querySelector('.id3')
+
+        const name1 = document.querySelector('.name')
+        const name2 = document.querySelector('.name2')
+        const name3 = document.querySelector('.name3')
+
+        const url1 = document.querySelector('.url')
+        const url2 = document.querySelector('.url2')
+        const url3 = document.querySelector('.url3')
+
+        // id1 styling
+        if (id1.style.display !== 'none') {
+            id1.style.display = 'table-cell';
+        } else {
+            id1.style.display = 'none';
+        }
+
+        // id2 styling
+        if (id2.style.display !== 'none') {
+            id2.style.display = 'table-cell';
+        } else {
+            id2.style.display = 'none';
+        }
+
+
+        // id3 styling
+        if (id3.style.display !== 'none') {
+            id3.style.display = 'table-cell';
+        } else {
+            id3.style.display = 'none';
+        }
+
+        // name1 styling
+        if (name1.style.display !== 'none') {
+            name1.style.display = 'table-cell';
+        } else {
+            name1.style.display = 'none';
+        }
+
+        // name2 styling
+        if (name2.style.display !== 'none') {
+            name2.style.display = 'table-cell';
+        } else {
+            name2.style.display = 'none';
+        }
+
+
+        // name3 styling
+        if (name3.style.display !== 'none') {
+            name3.style.display = 'table-cell';
+        } else {
+            name3.style.display = 'none';
+        }
+
+        // url1 styling
+        if (url1.style.display !== 'none') {
+            url1.style.display = 'table-cell';
+        } else {
+            url1.style.display = 'none';
+        }
+
+        // url2 styling
+        if (url2.style.display !== 'none') {
+            url2.style.display = 'table-cell';
+        } else {
+            url2.style.display = 'none';
+        }
+
+
+        // url3 styling
+        if (url3.style.display !== 'none') {
+            url3.style.display = 'table-cell';
+        } else {
+            url3.style.display = 'none';
+        }
+
+    }
+
+    getData()
+
+</script>
+
+</html>
