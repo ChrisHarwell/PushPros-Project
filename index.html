@@ -9,25 +9,13 @@
     <title>Document</title>
 </head>
 <style>
-    .id,
-    .id2,
-    .id3,
-    .name,
-    .name2,
-    .name3,
-    .url,
-    .url2,
-    .url3 {
-        display: none;
-    }
-
     .button {
         margin-left: 80vw;
     }
 </style>
 
 <body>
-    <button type="button" class="btn btn-primary button" onclick="toggleData()">Load Data</button>
+    <button type="button" class="btn btn-primary button" onclick="getData()">Load Data</button>
     <table class="table">
         <thead>
             <tr>
@@ -87,94 +75,9 @@
                     document.querySelector('.url').innerHTML = firstUrl
                     document.querySelector('.url2').innerHTML = secondUrl
                     document.querySelector('.url3').innerHTML = thirdUrl
-
-
                 })
             });
     }
-
-    function toggleData() {
-        const id1 = document.querySelector('.id')
-        const id2 = document.querySelector('.id2')
-        const id3 = document.querySelector('.id3')
-
-        const name1 = document.querySelector('.name')
-        const name2 = document.querySelector('.name2')
-        const name3 = document.querySelector('.name3')
-
-        const url1 = document.querySelector('.url')
-        const url2 = document.querySelector('.url2')
-        const url3 = document.querySelector('.url3')
-
-        // id1 styling
-        if (id1.style.display !== 'none') {
-            id1.style.display = 'table-cell';
-        } else {
-            id1.style.display = 'none';
-        }
-
-        // id2 styling
-        if (id2.style.display !== 'none') {
-            id2.style.display = 'table-cell';
-        } else {
-            id2.style.display = 'none';
-        }
-
-
-        // id3 styling
-        if (id3.style.display !== 'none') {
-            id3.style.display = 'table-cell';
-        } else {
-            id3.style.display = 'none';
-        }
-
-        // name1 styling
-        if (name1.style.display !== 'none') {
-            name1.style.display = 'table-cell';
-        } else {
-            name1.style.display = 'none';
-        }
-
-        // name2 styling
-        if (name2.style.display !== 'none') {
-            name2.style.display = 'table-cell';
-        } else {
-            name2.style.display = 'none';
-        }
-
-
-        // name3 styling
-        if (name3.style.display !== 'none') {
-            name3.style.display = 'table-cell';
-        } else {
-            name3.style.display = 'none';
-        }
-
-        // url1 styling
-        if (url1.style.display !== 'none') {
-            url1.style.display = 'table-cell';
-        } else {
-            url1.style.display = 'none';
-        }
-
-        // url2 styling
-        if (url2.style.display !== 'none') {
-            url2.style.display = 'table-cell';
-        } else {
-            url2.style.display = 'none';
-        }
-
-
-        // url3 styling
-        if (url3.style.display !== 'none') {
-            url3.style.display = 'table-cell';
-        } else {
-            url3.style.display = 'none';
-        }
-
-    }
-
-    getData()
 
 </script>
 
