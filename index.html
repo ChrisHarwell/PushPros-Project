@@ -24,7 +24,6 @@
                 <th scope="col">url</th>
             </tr>
         </thead>
-
         <tbody>
             <tr>
                 <td class="id"></td>
@@ -53,25 +52,25 @@
                 data.sites.map((item) => {
 
                     // id elements
-                    let firstId = data.sites[0].id
-                    let secondId = data.sites[1].id
-                    let thirdId = data.sites[2].id
+                    const firstId = data.sites[0].id
+                    const secondId = data.sites[1].id
+                    const thirdId = data.sites[2].id
                     document.querySelector('.id').innerHTML = firstId
                     document.querySelector('.id2').innerHTML = secondId
                     document.querySelector('.id3').innerHTML = thirdId
 
                     // name elements
-                    let firstName = data.sites[0].name
-                    let secondName = data.sites[1].name
-                    let thirdName = data.sites[2].name
+                    const firstName = data.sites[0].name
+                    const secondName = data.sites[1].name
+                    const thirdName = data.sites[2].name
                     document.querySelector('.name').innerHTML = firstName
                     document.querySelector('.name2').innerHTML = secondName
                     document.querySelector('.name3').innerHTML = thirdName
 
                     //url elements
-                    let firstUrl = data.sites[0].url
-                    let secondUrl = data.sites[1].url
-                    let thirdUrl = data.sites[2].url
+                    const firstUrl = data.sites[0].url
+                    const secondUrl = data.sites[1].url
+                    const thirdUrl = data.sites[2].url
                     document.querySelector('.url').innerHTML = firstUrl
                     document.querySelector('.url2').innerHTML = secondUrl
                     document.querySelector('.url3').innerHTML = thirdUrl
